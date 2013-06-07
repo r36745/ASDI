@@ -20,24 +20,92 @@
 	</head>
 	<body>
 		<div data-role="page" id= "home">
-			<div data-role="header" data-psotion="fixed" data-theme="">
+			<div data-role="header" data-position="fixed" data-theme="">
 				<h2>LifeTime Loser</h2>
 			</div>
-			<section data-role="content">
-			<p>LifeTime Loser,  the support team that will help you reach weight-loss goals, a place to share stories, recipes and most importantly encouragement.</p>
+			<section id="pumpIronPic">
+					<img src="images/workout.jpg"/>
+				</section>
+			<section data-role="content" id="intro">
+			<p><span id="life">LifeTime Loser</span>,  the support team that will help you reach weight-loss goals.</p>
 			</section>
-			<div class="joinNow"><span id="button">Join Now</span></div>
+			
+			<div class="joinNow"><a href="#addUser"<span id="button">Join Now</span></a></div>
+			<div><a href="#" id="existingUser">Existing User</a></div>
 			<div data-role="footer" data-postion="fixed" data-id="lLoser">
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
-						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#aboutUs" data-icon="star">About Us</a></li>
 					</ul>
 				</nav>
 
 			</div>
 		</div>
+		<div data-role="page" id="addUser">
+			<div data-role="header" data-position="fixed">
+				<h2>Sign-Up</h2>
+			</div>
+			<div data-role="content">
+				<p>Please enter your details</p>
+				<form action"" id="lifeForm">
+					<div data-role="fieldcontain">
+						<label for="name">First Name</label>
+						<input type="text" name="fname" class="required"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="name">Last Name</label>
+						<input type="text" name="lname" class="required"/>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="email">Email</label>
+						<input type="text" name="email" class="required"/>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>Personal Goal</legend>
+							<p>Please make one Choice</p>
+							<input type="radio" value="0-15 lbs." name="weightOpt" id="weightOpt1" class="required" data-theme="a" data-content-theme="a"/>
+							<label for="weightOpt1">0-15 lbs.</label>
+							<input type="radio" value="16-30 lbs." name="weightOpt" id="weightOpt2" data-theme="a" data-content-theme="a"/>
+							<label for="weightOpt2">16-30 lbs.</label>
+							<input type="radio" value="31-50 lbs." name="weightOpt" id="weightOpt3" data-theme="a" data-content-theme="a"/>
+							<label for="weightOpt3">31-50 lbs.</label>
+						</fieldset>
+						<div data-role="fieldcontain">
+							<fieldset data-role="controlgroup">
+							<legend>Newsletter</legend>
+							<input type="checkbox" checked value="Yes" name="newsletter" id="newsletter" data-theme="a" data-content-theme="a"/>
+							<label for="newsletter">Newsletter-Meal/Exercise Tips</label>
+							</fieldset>
+						</div>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="commentBox">Notes</label>
+						<textarea placeholder="Enter daily work"></textarea>
+					</div>
+					<div data-role="fieldcontain">
+		    		<div class="ui-grid-a">
+		    		<div class="ui-block-a"><input type="submit" value="Submit" /></div>
+					<div class="ui-block-b"><input type="reset" value="Cancel" /></div>
+		    		</div>
+		</div
+				</form>
+				<div data-role="footer" data-postion="fixed" data-id="lLoser">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#aboutUs" data-icon="star">About Us</a></li>
+					</ul>
+				</nav>
+
+			</div>
+
+			</div>
+
+
+		</div>
+
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
     	<script type="text/javascript" src="libs/jquery.validate.min.js"></script>
