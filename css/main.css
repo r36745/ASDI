@@ -17,7 +17,7 @@ p{
 #pumpIronPic{
 
 	margin: auto;
-	
+	position: relative;
 	height:110px;
 	width: 100%;
 	border: 1px solid black;
