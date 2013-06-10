@@ -27,7 +27,7 @@ function storeData(data)  {
 	var id              = Math.floor(Math.random() * 1000000001);
 
 	var item = 	{};
-	item.fname = ["First Name:", $("#fname").val()];
+	item.fname = ['First Name:', $('#fname').val()];
 	item.lname = ['First Name:', $('#lname').val()];
 	item.email = ['Email:', $('#email').val()];
 	item.weightOpt = ['Personal Goal:', weightOption];
