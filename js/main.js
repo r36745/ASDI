@@ -15,6 +15,7 @@ $('#addUser').on('pageinit',function(){
 		submitHandler: function(){
 			var data = woForm.serializeArray();
 			storeData(data);
+			getData(this.key);
 		}
 	});
 
@@ -36,9 +37,42 @@ function storeData(data)  {
 
 	localStorage.setItem(id, JSON.stringify(item));
     alert("contact saved");
+
 };	
 
+function getData() {
+	if(localStorage.length===0) {
+		alert("There is no data in localStorage")
+	};
+	//Write Data from localStorage to browser
+	var makeDiv = $('<div></div>');
+	makeDiv.prop('id', 'items');
+	var makeUl = $('<ul></ul>');
+	console.log('here');
+	makeDiv.append(makeUl);
+	document.body.append(makeDiv);
+	for(i=0, j=localStorage.length; i<j; i++) {
+		var makeLi = $('<li></li>');
+		makeUl.append(makeLi);
+		var key = localStorage.key(i);
+		var value = localStorage.getItem(key);
+		//Convert the string from localStorage to an object by using JSON.parse
+		var obj = JSON.parse(value);
+		var subUl = $('<ul></ul>');
+		makeLi.append(subUl);
+		for(n in obj) {
+			var subLi = $('<li></li>');
+			subUl.append(subLi);
+			var innerText = obj[n][0]+' '+obj[n][1];
+			subLi.html() = innerText;
+		};
 
+	};
+};
+
+
+var displayLink = $('#displayLink');
+$(displayLink).on('click',getData);
 
 //var clearLink = $('#clearLink');
 //$(clearLink).on('click', clearLocal);
