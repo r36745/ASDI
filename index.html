@@ -35,7 +35,7 @@
 			<div><a href="#" id="existingUser">Existing User</a></div>
 			<div data-role="footer" data-postion="fixed" data-id="lLoser">
 				<nav data-role="navbar">
-					<ul>
+					<ul id="nav">
 						<li><a href="#home" data-icon="home">Home</a></li>
 						<li><a href="#aboutUs" data-icon="star">About Us</a></li>
 					</ul>
@@ -83,11 +83,11 @@
 					</div>
 					<div data-role="fieldcontain">
 						<label for="commentBox">Notes</label>
-						<textarea placeholder="Enter daily work"></textarea>
+						<textarea placeholder="Enter daily work" id="notes"></textarea>
 					</div>
 					<div data-role="fieldcontain">
 		    			<div class="ui-grid-a">
-		    			<div class="ui-block-a"><input type="submit" value="Submit" /></div>
+		    			<div class="ui-block-a"><input type="submit" value="Submit" id="button" /></div>
 						<div class="ui-block-b"><input type="reset" value="Cancel" /></div>
 		    		</div>
 					</div
@@ -112,7 +112,7 @@
 				<div data-role="content">
 				<p>At LifeTime Loser, we start from the beginning. Looking to the inside, cleaning out the clutter, so the journey can begin. We Take into consideration, your current lifestyle, eating habits, as well, your sleeping habits. And help you construct the program that will help to bring you continued happiness throughout the journey </p>
 				</div>
-				<div data-role="footer" data-postion="fixed" data-id"lLoser"></div>
+				<div data-role="footer" data-postion="fixed" data-id="lLoser"></div>
 				<nav data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
@@ -120,6 +120,16 @@
 					</ul>
 				</nav>
 			</div>
+			<div data-role="page" id="weightGoal">
+				<h2>Personal Goal</h2>				
+			</div>
+			<div><img id="crunch" src="images/crunch.jpg"></div>
+			<div data-role="content" id="goalInfo">
+
+			</div>
+			<div data-role="footer" data-position="fixed" data-id="lLoser">
+			</div>
+
 
 
 		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
